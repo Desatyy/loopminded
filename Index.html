@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loopmind – ИИ‑агент для брокеров и девелоперов</title>
+  <meta name="description" content="Закрывайте сделки в 3 раза быстрее: Loopmind слушает звонок брокера и в реальном времени отправляет клиенту релевантные объекты недвижимости." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:#0d0d10;
+      --accent1:#2bd4ff;
+      --accent2:#51ffaf;
+      --text:#ffffff;
+      --text-muted:#a8b0bf;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.4}
+    section{padding:6rem 1.25rem;max-width:1200px;margin:0 auto}
+    h1{font-size:3rem;font-weight:800;max-width:680px;margin-bottom:1.25rem}
+    h2{font-size:2rem;font-weight:700;margin-bottom:1rem;text-align:center}
+    p{font-size:1.125rem;color:var(--text-muted)}
+    .btn{display:inline-block;padding:0.9rem 2.25rem;font-weight:600;border:none;border-radius:8px;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#000;text-decoration:none;transition:transform .15s ease-out;cursor:pointer}
+    .btn:hover{transform:scale(1.05)}
+    /* hero */
+    .hero{display:flex;flex-direction:column;align-items:flex-start}
+    .hero video{width:480px;border-radius:12px;margin-top:2rem;box-shadow:0 8px 32px rgba(0,0,0,.6)}
+    /* features */
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:3.5rem}
+    .feature-card{background:#131318;border-radius:12px;padding:2rem 1.5rem;border:1px solid #1e1e25}
+    .feature-card h3{font-size:1.25rem;font-weight:700;margin-bottom:0.75rem}
+    .feature-card p{font-size:1rem}
+    /* steps */
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3.5rem}
+    .step{display:flex;gap:1rem;align-items:flex-start}
+    .step-number{flex-shrink:0;font-size:1.5rem;font-weight:700;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#000;display:flex;align-items:center;justify-content:center}
+    .step p{margin-top:0;padding-top:0;font-size:1rem}
+    /* contact */
+    .contact{display:flex;flex-direction:column;align-items:center;text-align:center}
+    .contact input,.contact textarea{width:100%;max-width:480px;margin:0.5rem 0;padding:0.9rem 1rem;border-radius:6px;border:1px solid #2a2a2f;background:#1a1a1d;color:var(--text)}
+    .contact textarea{height:160px;resize:vertical}
+    .contact button{margin-top:1rem}
+    footer{padding:2rem 1.25rem;text-align:center;font-size:0.875rem;color:var(--text-muted)}
+    @media(min-width:900px){.hero{flex-direction:row;justify-content:space-between;align-items:center}.hero-content{max-width:600px}.hero video{width:560px}}
+  </style>
+</head>
+<body>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-content">
+      <h1>Закрой сделку в 3 раза быстрее</h1>
+      <p>Пока конкурент ставит клиента на холд, <strong>Loopmind</strong> отправляет подборку объектов в WhatsApp — прямо во время звонка.</p>
+      <a href="#contact" class="btn" style="margin-top:2rem">Попробовать бесплатно</a>
+    </div>
+    <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80">
+      <source src="https://cdn.jsdelivr.net/gh/loopmind/static-assets@main/hero-demo.mp4" type="video/mp4" />
+    </video>
+  </section>
+
+  <!-- FEATURES -->
+  <section>
+    <h2>Почему Loopmind?</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>–44 % длительности сделки</h3>
+        <p>Искусственный интеллект быстро находит релевантные объекты — клиент принимает решение до того, как остынет.</p>
+      </div>
+      <div class="feature-card">
+        <h3>+27 % конверсии</h3>
+        <p>Phuket Realty увеличили долю закрытых лидов без дополнительного штата продаж.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Интеграции за 10 мин</h3>
+        <p>Поддерживаем Bitrix24, AmoCRM, Salesforce, REST API и web‑hooks для кастомов.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section>
+    <h2>Как это работает</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <p><strong>Подключите CRM</strong> — импорт объектов одним кликом, без миграций.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <p><strong>Звоните клиенту</strong> — Loopmind слушает, распознаёт потребности и ищет варианты.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <p><strong>Получите подборку</strong> — объекты с фото и ценой прилетают в WhatsApp за 3 секунды.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Запросить демо</h2>
+    <p style="max-width:520px;margin:0 auto 1.5rem">Введите данные, и мы вышлем ссылку на живой звонок с ИИ‑агентом. Никаких продажников, только технология.</p>
+    <form action="mailto:demo@loopmind.pro" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Имя" required />
+      <input type="email" name="email" placeholder="you@agency.com" required />
+      <textarea name="message" placeholder="Комментарий (необязательно)"></textarea>
+      <button type="submit" class="btn">Отправить</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Loopmind • ИИ‑агент для рынка недвижимости
+  </footer>
+</body>
+</html>
